@@ -18,12 +18,12 @@ const body = document.querySelector("body");
 toggle.addEventListener("click", function () {
   this.classList.toggle("bi-moon-stars");
   if (this.classList.toggle("bi-moon-stars-fill")) {
-    body.style.background = "white";
-    body.style.color = "black";
+    body.style.background = "#fff";
+    body.style.color = "#000";
     body.style.transition = "2s";
   } else {
-    body.style.background = "black";
-    body.style.color = "white";
+    body.style.background = "#121212";
+    body.style.color = "#fff";
     body.style.transition = "2s";
   }
 });

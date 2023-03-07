@@ -5,6 +5,23 @@
   font-family: "poppins", Arial, Helvetica, sans-serif;
 }
 body {
+
+}
+.contact{
+  background: none;
+  border-radius: 10px;
+  padding: 10px;
+  width: auto;
+  background: #ffad32;
+  font-weight: 600;
+  font-size: 25px;
+  
+}
+.contact:hover{
+background-color: #fff;
+color: #7b1cd4;
+border-color: #f1a839;
+cursor: pointer;
 }
 /* Style the header with a grey background and some padding */
 header {
@@ -18,45 +35,44 @@ header a {
   float: left;
   /* color: #fff; */
   text-align: center;
-  padding: 7px;
+  padding: 10px;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 30px;
   line-height: 15px;
 }
 /* Last item in Header  */
 header a:nth-child(5) {
   margin-right: 15px;
-  color: #551A8B;
-  background-color: #f1a839;
+  color: #f1a839;
   border-radius: 15px;
 }
 header a:nth-child(5):hover {
   color: #551A8B;
-  font-size: 22px;
+  font-size: 25px;
  
 }
 header i:last-child:hover{
-  font-size: 30px;
+  font-size: 25px;
  
 }
 /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
 header a.logo {
   font-weight: bold;
-  font-size: 35px;
+  font-size: 30px;
 }
 
 /* Change the background color on mouse-over */
 header a:hover {
   background-color: none;
   color: #f1a839;
-  font-size: 22px;
+  font-size: 25px;
    font-weight: bold;
 }
 
 /* Style the active/current link*/
 .active {
   padding-bottom: 10px;
-  border-bottom: 2px solid #0f0f0f;
+  border-bottom: 3px solid #0f0f0f;
 }
 
 /* Float the link section to the right */
@@ -77,16 +93,15 @@ header span {
 .container {
   margin-top: 50px;
   margin-bottom: 50px;
-  margin-left: 200px;
-  margin-right: 200px;
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
 .row {
   display: flex;
 }
 
-.column {
-  float: left;
+.column2 {
   width: 50%;
 }
 
@@ -96,6 +111,43 @@ i {
   /* transform: translate(-50%, -50%); */
 }
 
+.column2{
+  float: right;
+}
+.column2 > h1{
+  margin-top: 150px;
+  margin-bottom: 10px;
+  font-size: 100px;
+  text-align: center;
+}
+.column2 > p{
+  font-size: 20px;
+  color: gray;
+  text-align: justify;
+  text-align: left;
+}
+ .column2 > div > img{
+    position: static;
+    z-index: 1;
+
+}
+.icons{
+  text-align: center;
+  padding: 50px;
+}
+.icons > i{
+  font-size: 30px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.icons > i:hover{
+  font-size: 25px;
+}
+.icons i:last-child{
+  position: absolute;
+  margin-top: 200px;
+  margin-left: -250px;
+}
 
 
 /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
@@ -105,8 +157,17 @@ i {
     display: block;
     text-align: left;
   }
-
+  header a:nth-child(5){
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 10px;
+  }
+  header i{
+   font-size: 30px; 
+   margin-left: 5px;
+  }  
   .header-right {
     float: none;
   }
+
 }
