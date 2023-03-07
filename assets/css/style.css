@@ -1,12 +1,11 @@
-*{
-  padding: 0;
-  margin: 0;
+* {
+  padding: 0%;
+  margin: 0%;
   box-sizing: border-box;
+  font-family: "poppins", Arial, Helvetica, sans-serif;
 }
 body {
-  font-family: 'poppins',Arial, Helvetica, sans-serif;
 }
-
 /* Style the header with a grey background and some padding */
 header {
   overflow: hidden;
@@ -25,24 +24,39 @@ header a {
   line-height: 15px;
 }
 /* Last item in Header  */
-header a:last-child {
-  color: #f1a839;
+header a:nth-child(5) {
+  margin-right: 15px;
+  color: #551A8B;
+  background-color: #f1a839;
+  border-radius: 15px;
+}
+header a:nth-child(5):hover {
+  color: #551A8B;
+  font-size: 22px;
+ 
+}
+header i:last-child:hover{
+  font-size: 30px;
+ 
 }
 /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
 header a.logo {
   font-weight: bold;
+  font-size: 35px;
 }
 
 /* Change the background color on mouse-over */
 header a:hover {
-  background-color: transparent;
-  color: #fff;
+  background-color: none;
+  color: #f1a839;
+  font-size: 22px;
+   font-weight: bold;
 }
 
 /* Style the active/current link*/
 .active {
   padding-bottom: 10px;
-  border-bottom: 2px solid #fff;
+  border-bottom: 2px solid #0f0f0f;
 }
 
 /* Float the link section to the right */
@@ -54,14 +68,13 @@ header span {
   color: #f1a839;
 }
 
-
-
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto auto;
+  column-gap: 10px;
 }
 
-.container{
+.container {
   margin-top: 50px;
   margin-bottom: 50px;
   margin-left: 200px;
@@ -75,6 +88,12 @@ header span {
 .column {
   float: left;
   width: 50%;
+}
+
+i {
+  font-size: 25px;
+  cursor: pointer;
+  /* transform: translate(-50%, -50%); */
 }
 
 
@@ -91,4 +110,3 @@ header span {
     float: none;
   }
 }
-
