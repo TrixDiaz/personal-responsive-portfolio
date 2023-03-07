@@ -4,28 +4,7 @@
   box-sizing: border-box;
   font-family: "poppins", Arial, Helvetica, sans-serif;
 }
-body {
 
-}
-.contact > a {
-  text-decoration: none;
-  color: #000;
-}
-.contact{
-  background: none;
-  border-radius: 10px;
-  padding: 10px;
-  width: auto;
-  background: #ffad32;
-  font-weight: 600;
-  font-size: 25px;  
-}
-.contact:hover{
-background-color: #fff;
-color: #7b1cd4;
-border-color: #f1a839;
-cursor: pointer;
-}
 /* Style the header with a grey background and some padding */
 header {
   overflow: hidden;
@@ -117,7 +96,7 @@ i {
   float: right;
 }
 .column2 > h1{
-  margin-top: 150px;
+  margin-top: 50px;
   margin-bottom: 10px;
   font-size: 100px;
   text-align: left;
@@ -128,10 +107,11 @@ i {
   text-align: justify;
   text-align: left;
 }
- .column2 > div > img{
+ .column2 > img{
     position: static;
     z-index: 1;
-
+    width: 80%;
+    float: right;
 }
 .icons{
   text-align: center;
@@ -145,23 +125,58 @@ i {
 .icons > i:hover{
   font-size: 25px;
 }
-.icons i:last-child{
-  position: absolute;
-  margin-top: 200px;
-  margin-left: -250px;
+
+.contact > a {
+  text-decoration: none;
+  color: #fff;
 }
+.contact > a:hover{
+  color: #000;
+}
+.contact{
+  background: none;
+  border-radius: 10px;
+  padding: 10px;
+  width: auto;
+  background: #000;
+  color: #fff; 
+  font-weight: 600;
+  font-size: 25px; 
+}
+.contact:hover{
+background-color: #fff;
+color: #000;
+border-color: none;
+cursor: pointer;
+}
+
 
 .darkMode{
 background: #000;
 color: #fff;
 transition: 2s;
 }
-
-.lightMode{
-background: #fff;
-color: #000;
-transition: 2s;
+.darkMode .contact > a {
+  text-decoration: none;
+  color: #000;
 }
+.darkMode .contact{
+  background: none;
+  border-radius: 10px;
+  padding: 10px;
+  width: auto;
+  background: #fff;
+  font-weight: 600;
+  font-size: 25px; 
+  color: #000; 
+}
+.darkMode .contact:hover{
+background-color: #fff;
+color: #7b1cd4;
+border-color: #f1a839;
+cursor: pointer;
+}
+
 
 
 

@@ -19,10 +19,11 @@ toggle.addEventListener("click", function () {
   this.classList.toggle("bi-moon-stars");
   if (this.classList.toggle("bi-moon-stars-fill")) {
      body.classList.remove("darkMode");
-     body.classList.add("lightMode");
+    //  body.classList.add("lightMode");
   } else {
-      body.classList.remove("lightMode");
+      // body.classList.remove("lightMode");
       body.classList.add("darkMode");
+      body.style.transition = '2s';
   }
 });
 
