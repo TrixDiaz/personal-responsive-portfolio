@@ -7,6 +7,10 @@
 body {
 
 }
+.contact > a {
+  text-decoration: none;
+  color: #000;
+}
 .contact{
   background: none;
   border-radius: 10px;
@@ -14,8 +18,7 @@ body {
   width: auto;
   background: #ffad32;
   font-weight: 600;
-  font-size: 25px;
-  
+  font-size: 25px;  
 }
 .contact:hover{
 background-color: #fff;
@@ -118,7 +121,7 @@ i {
   margin-top: 150px;
   margin-bottom: 10px;
   font-size: 100px;
-  text-align: center;
+  text-align: left;
 }
 .column2 > p{
   font-size: 20px;
