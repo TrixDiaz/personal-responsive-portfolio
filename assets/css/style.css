@@ -20,7 +20,7 @@ header {
 /* Style the header links */
 header a {
   float: left;
-  /* color: #fff; */
+  color: var(--black);
   text-align: center;
   padding: 10px;
   text-decoration: none;
@@ -58,7 +58,7 @@ header a:hover {
 /* Style the active/current link*/
 .active {
   padding-bottom: 10px;
-  border-bottom: 3px solid #0f0f0f;
+  border-bottom: 3px solid var(--black);
 }
 
 /* Float the link section to the right */
@@ -136,7 +136,7 @@ i {
   color: var(--white);
 }
 .contact > a:hover{
-  color: var(--black);
+  color: var(--white);
 }
 .contact{
   background: none;
@@ -149,8 +149,7 @@ i {
   font-size: 25px; 
 }
 .contact:hover{
-background-color: var(--white);
-color: #000;
+color: var(--white);
 border-color: none;
 cursor: pointer;
 }
@@ -177,9 +176,43 @@ transition: 2s;
 }
 .darkMode .contact:hover{
 background-color: var(--white);
-color: #7b1cd4;
-border-color: #f1a839;
+color: var(--black);
+border-color: var(--black);
 cursor: pointer;
+}
+.darkMode header a{
+  color: var(--gray);
+}
+.darkMode .active {
+  padding-bottom: 10px;
+  border-bottom: 3px solid var(--white);
+}
+/* Last item in Header  */
+.darkMode header a:nth-child(5) {
+  margin-right: 15px;
+  color: #f1a839;
+  border-radius: 15px;
+}
+.darkMode header a:nth-child(5):hover {
+  color: var(--gray);
+  font-size: 25;
+}
+.darkMode header i:last-child:hover{
+  font-size: 30px;
+ 
+}
+/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+.darkMode header a.logo {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+/* Change the background color on mouse-over */
+.darkMode header a:hover {
+  background-color: none;
+  color: #f1a839;
+  font-size: 20px;
+   font-weight: bold;
 }
 .darkMode .column2 > p{
   font-size: 20px;
