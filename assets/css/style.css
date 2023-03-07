@@ -4,6 +4,11 @@
   box-sizing: border-box;
   font-family: "poppins", Arial, Helvetica, sans-serif;
 }
+:root{
+  --black: #19282F;
+  --white: #E8F9FD;
+  --gray: #B5D5C5;
+}
 
 /* Style the header with a grey background and some padding */
 header {
@@ -128,23 +133,23 @@ i {
 
 .contact > a {
   text-decoration: none;
-  color: #fff;
+  color: var(--white);
 }
 .contact > a:hover{
-  color: #000;
+  color: var(--black);
 }
 .contact{
   background: none;
   border-radius: 10px;
   padding: 10px;
   width: auto;
-  background: #000;
-  color: #fff; 
+  background: var(--black);
+  color: var(--white); 
   font-weight: 600;
   font-size: 25px; 
 }
 .contact:hover{
-background-color: #fff;
+background-color: var(--white);
 color: #000;
 border-color: none;
 cursor: pointer;
@@ -152,29 +157,35 @@ cursor: pointer;
 
 
 .darkMode{
-background: #000;
-color: #fff;
+background: var(--black);
+color: var(--white);
 transition: 2s;
 }
 .darkMode .contact > a {
   text-decoration: none;
-  color: #000;
+  color: var(--black);
 }
 .darkMode .contact{
   background: none;
   border-radius: 10px;
   padding: 10px;
   width: auto;
-  background: #fff;
+  background: var(--white);
   font-weight: 600;
   font-size: 25px; 
-  color: #000; 
+  color: var(--black); 
 }
 .darkMode .contact:hover{
-background-color: #fff;
+background-color: var(--white);
 color: #7b1cd4;
 border-color: #f1a839;
 cursor: pointer;
+}
+.darkMode .column2 > p{
+  font-size: 20px;
+  color: var(--gray);
+  text-align: justify;
+  text-align: left;
 }
 
 
