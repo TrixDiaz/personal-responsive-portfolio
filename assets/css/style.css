@@ -14,7 +14,7 @@
 header {
   overflow: hidden;
   /* background-color: #f1f1f1; */
-  padding: 20px 70px;
+  padding: 30px 80px;
 }
 
 /* Style the header links */
@@ -89,6 +89,7 @@ header span {
 
 .column2 {
   width: 50%;
+  z-index: -1;
 }
 
 i {
@@ -97,13 +98,11 @@ i {
   /* transform: translate(-50%, -50%); */
 }
 
-.column2{
-  float: right;
-}
+
 .column2 > h1{
   margin-top: 50px;
   margin-bottom: 10px;
-  font-size: 100px;
+  font-size: 60px;
   text-align: left;
 }
 .column2 > p{
@@ -117,18 +116,23 @@ i {
     z-index: 1;
     width: 80%;
     float: right;
+    overflow: hidden;
 }
 .icons{
+  padding-top: 50px;
+  margin-top: 50px;
+  width:10%;
   text-align: center;
-  padding: 50px;
 }
 .icons > i{
+  padding-top: 30px;
+  padding-bottom: 10px;
   font-size: 30px;
-  margin-right: 20px;
-  margin-left: 20px;
+  display: block;
 }
 .icons > i:hover{
   font-size: 25px;
+  color: var(--gray);
 }
 
 .contact > a {
@@ -146,7 +150,7 @@ i {
   background: var(--black);
   color: var(--white); 
   font-weight: 600;
-  font-size: 25px; 
+  font-size: 20px; 
 }
 .contact:hover{
 color: var(--white);
@@ -171,7 +175,7 @@ transition: 2s;
   width: auto;
   background: var(--white);
   font-weight: 600;
-  font-size: 25px; 
+  font-size: 20px;
   color: var(--black); 
 }
 .darkMode .contact:hover{
