@@ -89,7 +89,6 @@ header span {
 
 .column2 {
   width: 50%;
-  z-index: -1;
 }
 
 i {
@@ -104,12 +103,14 @@ i {
   margin-bottom: 10px;
   font-size: 60px;
   text-align: left;
+  z-index: -1;
 }
 .column2 > p{
   font-size: 20px;
   color: gray;
   text-align: justify;
   text-align: left;
+  z-index: -1;
 }
  .column2 > img{
     position: static;
