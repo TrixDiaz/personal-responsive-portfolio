@@ -9,7 +9,16 @@
   --white: #E8F9FD;
   --gray: #B5D5C5;
 }
-
+body{
+  background-color: var(--white);
+}
+h1{
+  color: var(--black);
+  text-align: center;
+}
+.aboutme{
+  font-size: 50px;
+}
 /* Style the header with a grey background and some padding */
 header {
   overflow: hidden;
