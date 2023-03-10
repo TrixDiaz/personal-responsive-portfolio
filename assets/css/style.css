@@ -1,252 +1,154 @@
-* {
-  padding: 0%;
-  margin: 0%;
-  box-sizing: border-box;
-  font-family: "poppins", Arial, Helvetica, sans-serif;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif, arial, 'Times New Roman', Times, serif;
 }
-:root{
-  --black: #19282F;
-  --white: #E8F9FD;
-  --gray: #B5D5C5;
+body{
+    height: 100vh;
+    background-color: #000;
+    background-image: url('https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1517&q=80');
+    background-size: cover;
+    background-position: center;
 }
 
-/* Style the header with a grey background and some padding */
+li{
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+}
+
+a:hover{
+    color: orange;
+}
+/* Header */
 header {
-  overflow: hidden;
-  /* background-color: #f1f1f1; */
-  padding: 30px 80px;
+    position: relative;
+    padding: 0 2rem;
 }
 
-/* Style the header links */
-header a {
-  float: left;
-  color: var(--black);
-  text-align: center;
-  padding: 10px;
-  text-decoration: none;
-  font-size: 20px;
-  line-height: 15px;
-}
-/* Last item in Header  */
-header a:nth-child(5) {
-  margin-right: 15px;
-  color: #f1a839;
-  border-radius: 15px;
-}
-header a:nth-child(5):hover {
-  color: #551A8B;
-  font-size: 25;
-}
-header i:last-child:hover{
-  font-size: 30px;
- 
-}
-/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
-header a.logo {
-  font-weight: bold;
-  font-size: 25px;
+.navbar{
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-/* Change the background color on mouse-over */
-header a:hover {
-  background-color: none;
-  color: #f1a839;
-  font-size: 20px;
-   font-weight: bold;
+.navbar .logo a{
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
-/* Style the active/current link*/
-.active {
-  padding-bottom: 10px;
-  border-bottom: 3px solid var(--black);
+.navbar .links{
+    display: flex;
+    gap: 2rem;
 }
 
-/* Float the link section to the right */
-.header-right {
-  float: right;
-}
-/* Color on Logo Name */
-header span {
-  color: #f1a839;
+.navbar .toggle_btn{
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  column-gap: 10px;
+.action_btn{
+    background-color:orange;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease ;
 }
 
-.container {
-  margin-top: 50px;
-  margin-bottom: 50px;
-  margin-left: 100px;
-  margin-right: 100px;
+.action_btn:hover{
+    scale: 1.05;
+    color: #fff;
 }
 
-.row {
-  display: flex;
+.action-btn:active{
+    scale: 0.95;
+
 }
 
-.column2 {
-  width: 50%;
-}
-
-i {
-  font-size: 25px;
-  cursor: pointer;
-  /* transform: translate(-50%, -50%); */
-}
-
-
-.column2 > h1{
-  margin-top: 50px;
-  margin-bottom: 10px;
-  font-size: 60px;
-  text-align: left;
-  z-index: -1;
-}
-.column2 > p{
-  font-size: 20px;
-  color: gray;
-  text-align: justify;
-  text-align: left;
-  z-index: -1;
-}
- .column2 > img{
-    position: static;
-    z-index: 1;
-    width: 80%;
-    float: right;
+/* Dropdown Menu */
+.dropdown_menu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
     overflow: hidden;
-}
-.icons{
-  padding-top: 50px;
-  margin-top: 50px;
-  width:10%;
-  text-align: center;
-}
-.icons > i{
-  padding-top: 30px;
-  padding-bottom: 10px;
-  font-size: 30px;
-  display: block;
-}
-.icons > i:hover{
-  font-size: 25px;
-  color: var(--gray);
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.contact > a {
-  text-decoration: none;
-  color: var(--white);
-}
-.contact > a:hover{
-  color: var(--white);
-}
-.contact{
-  background: none;
-  border-radius: 10px;
-  padding: 10px;
-  width: auto;
-  background: var(--black);
-  color: var(--white); 
-  font-weight: 600;
-  font-size: 20px; 
-}
-.contact:hover{
-color: var(--white);
-border-color: none;
-cursor: pointer;
+.dropdown_menu.open{
+    height: 240px;
 }
 
-
-.darkMode{
-background: var(--black);
-color: var(--white);
-transition: 2s;
-}
-.darkMode .contact > a {
-  text-decoration: none;
-  color: var(--black);
-}
-.darkMode .contact{
-  background: none;
-  border-radius: 10px;
-  padding: 10px;
-  width: auto;
-  background: var(--white);
-  font-weight: 600;
-  font-size: 20px;
-  color: var(--black); 
-}
-.darkMode .contact:hover{
-background-color: var(--white);
-color: var(--black);
-border-color: var(--black);
-cursor: pointer;
-}
-.darkMode header a{
-  color: var(--gray);
-}
-.darkMode .active {
-  padding-bottom: 10px;
-  border-bottom: 3px solid var(--white);
-}
-/* Last item in Header  */
-.darkMode header a:nth-child(5) {
-  margin-right: 15px;
-  color: #f1a839;
-  border-radius: 15px;
-}
-.darkMode header a:nth-child(5):hover {
-  color: var(--gray);
-  font-size: 25;
-}
-.darkMode header i:last-child:hover{
-  font-size: 30px;
- 
-}
-/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
-.darkMode header a.logo {
-  font-weight: bold;
-  font-size: 25px;
+.dropdown_menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Change the background color on mouse-over */
-.darkMode header a:hover {
-  background-color: none;
-  color: #f1a839;
-  font-size: 20px;
-   font-weight: bold;
-}
-.darkMode .column2 > p{
-  font-size: 20px;
-  color: var(--gray);
-  text-align: justify;
-  text-align: left;
+.dropdown_menu .action_btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
-
-
-
-/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
-@media screen and (max-width: 600px) {
-  header a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-  header a:nth-child(5){
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-bottom: 10px;
-  }
-  header i{
-   font-size: 30px; 
-   margin-left: 5px;
-  }  
-  .header-right {
-    float: none;
-  }
-
+/* Home Design*/
+section#home{
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
 }
+
+#home h1 {
+    font: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* Responsive Design  */
+@media(max-width: 992px){
+    .navbar .links,
+    .navbar .action_btn {
+        display: none;
+    }
+
+    .navbar .toggle_btn{
+        display: block;
+    }
+
+    .dropdown_menu{
+        display: block;
+    }
+}
+
+@media(max-width: 576px){
+    .dropdown_menu {
+        left: 2rem;
+        width: unset;
+    }
+}
+
